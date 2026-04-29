@@ -61,12 +61,14 @@
                     <main class="mt-6">
                         <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
                             <a href="/pertemuan1" class="px-4 py-2 text-white rounded">Pertemuan 1</a>
-                            <a href="/pertemuan2" class="px-4 py-2 text-white rounded">Pertemuan 2</a>
+                            <a href="/pertemuan2-1" class="px-4 py-2 text-white rounded">Pertemuan 2 - 1</a>
+                            <a href="/pertemuan2-2" class="px-4 py-2 text-white rounded">Pertemuan 2 - 2</a>
                             <a href="/pertemuan3" class="px-4 py-2 text-white rounded">Pertemuan 3</a>
                             <a href="/tugaspertemuan3" class="px-4 py-2 text-white rounded">Tugas 3</a>
                             <a href="/tugaspertemuan4" class="px-4 py-2 text-white rounded">Tugas 4</a>
                             <a href="/tugaspertemuan5" class="px-4 py-2 text-white rounded">Tugas 5</a>
                             <a href="/pertemuan5" class="px-4 py-2 text-white rounded">Pertemuan 5</a>
+                            <a href="/pertemuan5-menu" class="px-4 py-2 text-white rounded">Pertemuan 5 - menu</a>
                             <a href="/pertemuan6" class="px-4 py-2 text-white rounded">Pertemuan 6</a>
                         </div>
                         <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
