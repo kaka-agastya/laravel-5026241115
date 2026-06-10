@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\TasDBController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\BelanjaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -74,3 +75,10 @@ Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+Route::get('/belanja', [BelanjaController::class, 'index'])->name('belanja.index');
+Route::get('/belanja/create', [BelanjaController::class, 'create'])->name('belanja.create');
+Route::post('/belanja', [BelanjaController::class, 'store'])->name('belanja.store');
+Route::get('/belanja/{nrp}/edit', [BelanjaController::class, 'edit'])->name('belanja.edit');
+Route::put('/belanja/{nrp}', [BelanjaController::class, 'update'])->name('belanja.update');
+Route::delete('/belanja/{nrp}', [BelanjaController::class, 'destroy'])->name('belanja.destroy');
