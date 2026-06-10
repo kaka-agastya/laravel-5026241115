@@ -79,6 +79,6 @@ Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.
 Route::get('/belanja', [BelanjaController::class, 'index'])->name('belanja.index');
 Route::get('/belanja/create', [BelanjaController::class, 'create'])->name('belanja.create');
 Route::post('/belanja', [BelanjaController::class, 'store'])->name('belanja.store');
-Route::get('/belanja/{nrp}/edit', [BelanjaController::class, 'edit'])->name('belanja.edit');
-Route::put('/belanja/{nrp}', [BelanjaController::class, 'update'])->name('belanja.update');
+// Route::get('/belanja/{nrp}/edit', [BelanjaController::class, 'edit'])->name('belanja.edit');
+// Route::put('/belanja/{nrp}', [BelanjaController::class, 'update'])->name('belanja.update');
 Route::delete('/belanja/{nrp}', [BelanjaController::class, 'destroy'])->name('belanja.destroy');
