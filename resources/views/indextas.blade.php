@@ -1,4 +1,4 @@
-@extends('templatetas')
+@extends('template')
 @section('judul_halaman', 'Data Tas')
 @section('konten')
     <a href="/tas/tambah" class="btn btn-primary my-4"> + Tambah tas Baru</a>

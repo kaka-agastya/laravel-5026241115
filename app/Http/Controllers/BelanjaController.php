@@ -57,7 +57,7 @@ class BelanjaController extends Controller
         return redirect()->route('belanja.index')->with('success', 'Data produk berhasil diubah.');
     }
 
-    public function destroy($keranjangbelanja)
+    public function destroy($ID)
     {
         DB::table('keranjangbelanja')->where('ID', $ID)->delete();
 

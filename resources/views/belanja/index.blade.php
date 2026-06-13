@@ -1,4 +1,4 @@
-@extends('belanja.template')
+@extends('template')
 @section('title', 'Data Produk')
 @section('konten')
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\TasDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
+use App\Http\Controllers\KuliahController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -82,3 +83,10 @@ Route::post('/belanja', [BelanjaController::class, 'store'])->name('belanja.stor
 // Route::get('/belanja/{nrp}/edit', [BelanjaController::class, 'edit'])->name('belanja.edit');
 // Route::put('/belanja/{nrp}', [BelanjaController::class, 'update'])->name('belanja.update');
 Route::delete('/belanja/{nrp}', [BelanjaController::class, 'destroy'])->name('belanja.destroy');
+
+Route::get('/kuliah', [KuliahController::class, 'index'])->name('kuliah.index');
+Route::get('/kuliah/create', [KuliahController::class, 'create'])->name('kuliah.create');
+Route::post('/kuliah', [KuliahController::class, 'store'])->name('kuliah.store');
+// Route::get('/belanja/{nrp}/edit', [BelanjaController::class, 'edit'])->name('belanja.edit');
+// Route::put('/belanja/{nrp}', [BelanjaController::class, 'update'])->name('belanja.update');
+Route::delete('/kuliah/{nrp}', [KuliahController::class, 'destroy'])->name('kuliah.destroy');

@@ -1,7 +1,7 @@
 @extends('template')
-@section('title', 'Data Produk')
+@section('title', 'Data Nilai')
 @section('konten')
-    <a href="/belanja" class="btn btn-secondary my-4">Kembali</a>
+    <a href="/kuliah" class="btn btn-secondary my-4">Kembali</a>
 
     @if ($errors->any())
         <ul style="color: red;">
@@ -10,32 +10,31 @@
             @endforeach
         </ul>
     @endif
-
     <div class="card">
-        <div class="card-header">Form Tambah Data Belanja</div>
+        <div class="card-header">Form Tambah Data Nilai </div>
 
         <div class="card-body">
-            <form action="{{ route('belanja.store') }}" method="POST" onsubmit="return validasiForm()">
+            <form action="{{ route('kuliah.store') }}" method="POST" onsubmit="return validasiForm()">
                 @csrf
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Kode Barang</label>
+                    <label class="col-sm-2 col-form-label">NRP</label>
                     <div class="col-sm-10">
-                        <input type="text" name="KodeBarang" id="KodeBarang" value="{{ old('KodeBarang') }}">
+                        <input type="text" name="NRP" id="NRP" value="{{ old('NRP') }}">
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Jumlah</label>
+                    <label class="col-sm-2 col-form-label">Nilai Angka</label><br>
                     <div class="col-sm-10">
-                        <input type="text" name="Jumlah" id="Jumlah" value="{{ old('Jumlah') }}">
+                        <input type="text" name="NilaiAngka" id="NilaiAngka" value="{{ old('NilaiAngka') }}">
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Harga</label>
+                    <label class="col-sm-2 col-form-label">SKS</label><br>
                     <div class="col-sm-10">
-                        <input type="text" name="Harga" id="Harga" value="{{ old('Harga') }}">
+                        <input type="text" name="SKS" id="SKS" value="{{ old('SKS') }}">
                     </div>
                 </div>
 

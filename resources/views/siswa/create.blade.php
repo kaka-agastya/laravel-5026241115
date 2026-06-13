@@ -1,8 +1,7 @@
 @extends('template')
 @section('title', 'Data Siswa')
 @section('konten')
-
-    <h2>Tambah Siswa</h2>
+    <a href="/siswa" class="btn btn-secondary my-4">Kembali</a>
 
     @if ($errors->any())
         <ul style="color: red;">
@@ -11,33 +10,49 @@
             @endforeach
         </ul>
     @endif
+        <div class="card">
+            <div class="card-header">Form Tambah Data Siswa</div>
 
+           <div class="card-body"> 
     <form action="{{ route('siswa.store') }}" method="POST" onsubmit="return validasiForm()">
         @csrf
 
-        <p>
-            <label>NRP</label><br>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">NRP</label>
+            <div class="col-sm-10">
             <input type="text" name="NRP" id="NRP" maxlength="10" value="{{ old('NRP') }}">
-        </p>
+            </div>
+        </div>
 
-        <p>
-            <label>Nama</label><br>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Nama</label>
+            <div class="col-sm-10">
             <input type="text" name="Nama" id="Nama" maxlength="20" value="{{ old('Nama') }}">
-        </p>
+            </div>
+        </div>
 
-        <p>
-            <label>Kelas</label><br>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Kelas</label>
+            <div class="col-sm-10">
             <input type="text" name="Kelas" id="Kelas" maxlength="5" value="{{ old('Kelas') }}">
-        </p>
+            </div>
+        </div>
 
-        <p>
-            <label>Tanggal Lahir</label><br>
-            <input type="date" name="TanggalLahir" id="TanggalLahir" value="{{ old('TanggalLahir') }}">
-        </p>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
+            <div class="col-sm-10">
+                <input type="date" name="TanggalLahir" id="TanggalLahir" value="{{ old('TanggalLahir') }}">
+            </div>
+        </div>
 
-        <button type="submit">Simpan</button>
-        <a href="{{ route('siswa.index') }}">Kembali</a>
+        <div class="row">
+            <div class="offset-sm-2 col-sm-10">
+                <input type="submit" class="btn btn-primary" value="Simpan Data">
+            </div>
+        </div>
     </form>
+    </div>
+    </div>
 
     <script>
         function validasiForm() {
