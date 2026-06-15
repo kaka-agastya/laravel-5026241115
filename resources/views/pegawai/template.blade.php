@@ -16,7 +16,7 @@
 
     <div class="container">
         <div class="mt-4 p-5 bg-primary text-white rounded">
-            <h1>5026241115 Kaka Agastya Herlambang Wahyudi</h1>
+            <h1>Kode Soal mypegawai</h1>
             <p>@yield('judul_halaman')</p>
         </div>
 
@@ -39,7 +39,7 @@
                         <a class="nav-link {{ request()->is('kuliah') ? 'active' : '' }}" href="/kuliah">Latihan 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('kuliah') ? 'active' : '' }}" href="/eas">EAS</a>
+                        <a class="nav-link {{ request()->is('eas') ? 'active' : '' }}" href="/eas">EAS</a>
                     </li>
                 </ul>
             </div>
@@ -63,16 +63,22 @@
     </script>
     @endif
 
-    @if (session('error'))
-    <script>
-        Swal.fire({
-            icon: 'error',
-            title: 'Gagal!',
-            text: '{{ session('error') }}',
-            confirmButtonColor: '#dc3545',
-        });
-    </script>
+    @if ($errors->any())
+        <script>
+            let errorMessages = '<style="text-align: center; margin-bottom: 0;">';
+            @foreach ($errors->all() as $error)
+                errorMessages += '{{ $error }}';
+            @endforeach
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Terdapat Kesalahan!',
+                html: errorMessages,
+                confirmButtonColor: '#dc3545',
+            });
+        </script>
     @endif
+
 
 </body>
 

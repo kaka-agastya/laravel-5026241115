@@ -7,6 +7,7 @@ use App\Http\Controllers\TasDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\KuliahController;
+use App\Http\Controllers\PegawaiController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -90,3 +91,8 @@ Route::post('/kuliah', [KuliahController::class, 'store'])->name('kuliah.store')
 // Route::get('/belanja/{nrp}/edit', [BelanjaController::class, 'edit'])->name('belanja.edit');
 // Route::put('/belanja/{nrp}', [BelanjaController::class, 'update'])->name('belanja.update');
 Route::delete('/kuliah/{nrp}', [KuliahController::class, 'destroy'])->name('kuliah.destroy');
+
+Route::get('/eas', [PegawaiController::class, 'index'])->name('pegawai.index');
+Route::get('/eas/create', [PegawaiController::class, 'create'])->name('pegawai.create');
+Route::post('/eas', [PegawaiController::class, 'store'])->name('pegawai.store');
+Route::get('/eas/{id}', [PegawaiController::class, 'view'])->name('pegawai.view');
